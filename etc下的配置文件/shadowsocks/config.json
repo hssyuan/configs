@@ -1,0 +1,11 @@
+{
+    "server":"23.105.223.75",
+    "server_port":444,
+    "local_address": "127.0.0.1",
+    "local_port":1080,
+    "password":"hsx011231",
+    "timeout":300,
+    "method":"aes-128-cfb",
+    "fast_open": true,
+    "workers": 1
+}
