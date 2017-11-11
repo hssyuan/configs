@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=compton
+Comment=Start Compton compositor
+NoDisplay=true
+Exec=compton --backend glx --unredir-if-possible --glx-swap-method buffer-age --glx-no-stencil --paint-on-overlay --vsync opengl

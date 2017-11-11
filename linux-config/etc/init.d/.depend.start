@@ -1,0 +1,32 @@
+TARGETS = rsyslog shadowsocks hostapd triggerhappy dhcpcd polipo killprocs motd nethack-common lighttpd dnsmasq dbus vsftpd hddtemp l2tp-ipsec-vpn-daemon l2tpns ssh dphys-swapfile anacron ntp apache2 proftpd network-manager avahi-daemon isc-dhcp-server lightdm privoxy bluetooth cron rsync openvpn kdm xl2tpd shairport bootlogs single raspi-config plymouth rc.local rmnologin
+INTERACTIVE = apache2 openvpn
+lighttpd: rsyslog
+dnsmasq: rsyslog
+dbus: rsyslog
+vsftpd: rsyslog
+hddtemp: rsyslog
+l2tp-ipsec-vpn-daemon: rsyslog
+l2tpns: rsyslog
+ssh: rsyslog
+dphys-swapfile: rsyslog
+anacron: rsyslog
+ntp: rsyslog
+apache2: rsyslog dnsmasq
+proftpd: rsyslog dnsmasq
+network-manager: dbus rsyslog
+avahi-daemon: dbus rsyslog
+isc-dhcp-server: rsyslog dnsmasq
+lightdm: dbus
+privoxy: dnsmasq
+bluetooth: rsyslog dbus
+cron: rsyslog dnsmasq
+rsync: rsyslog dnsmasq
+openvpn: rsyslog network-manager
+kdm: openvpn dbus
+xl2tpd: rsyslog
+shairport: avahi-daemon
+bootlogs: kdm
+single: killprocs bootlogs motd
+plymouth: kdm lighttpd rsyslog shadowsocks proftpd dnsmasq openvpn network-manager avahi-daemon dbus xl2tpd hostapd shairport vsftpd hddtemp triggerhappy l2tp-ipsec-vpn-daemon isc-dhcp-server l2tpns lightdm dhcpcd privoxy bluetooth polipo bootlogs motd raspi-config ssh cron nethack-common dphys-swapfile anacron rsync ntp apache2
+rc.local: lighttpd rsyslog shadowsocks proftpd dnsmasq openvpn network-manager kdm avahi-daemon dbus xl2tpd hostapd shairport vsftpd hddtemp triggerhappy l2tp-ipsec-vpn-daemon isc-dhcp-server l2tpns lightdm dhcpcd privoxy bluetooth polipo bootlogs motd raspi-config ssh cron nethack-common dphys-swapfile anacron rsync ntp apache2
+rmnologin: lighttpd rsyslog shadowsocks proftpd dnsmasq openvpn network-manager kdm avahi-daemon dbus xl2tpd hostapd shairport vsftpd hddtemp triggerhappy l2tp-ipsec-vpn-daemon isc-dhcp-server l2tpns lightdm dhcpcd privoxy bluetooth polipo bootlogs motd raspi-config ssh cron nethack-common dphys-swapfile anacron rsync ntp apache2

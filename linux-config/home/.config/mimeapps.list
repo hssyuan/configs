@@ -1,0 +1,28 @@
+[Added Associations]
+application/x-rar=xarchiver.desktop;
+application/x-executable=leafpad.desktop;
+inode/directory=pcmanfm.desktop;
+application/x-deb=pi-gpk-install-local-file.desktop;
+audio/mpeg=userapp-mpg123-B2452Y.desktop;qjackctl.desktop;
+application/x-java-archive=userapp-java -jar-IP533Y.desktop;
+application/vnd.ms-publisher=leafpad.desktop;
+application/x-tar=userapp-gem-J4CS3Y.desktop;
+application/x-xz-compressed-tar=pi-gpk-dbus-service.desktop;pi-gpk-install-local-file.desktop;
+image/vnd.microsoft.icon=gpicview.desktop;
+text/x-markdown=leafpad.desktop;
+application/x-yaml=leafpad.desktop;
+text/html=leafpad.desktop;
+text/plain=leafpad.desktop;
+image/x-xcf=display-im6.desktop;
+application/pdf=xpdf.desktop;
+
+[Default Applications]
+inode/directory=pcmanfm.desktop
+audio/mpeg=userapp-mpg123-B2452Y.desktop
+application/x-java-archive=userapp-java -jar-IP533Y.desktop
+text/x-markdown=leafpad.desktop
+application/x-yaml=leafpad.desktop
+text/html=leafpad.desktop
+text/plain=leafpad.desktop
+image/x-xcf=display-im6.desktop
+application/pdf=xpdf.desktop

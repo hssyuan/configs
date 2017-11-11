@@ -1,0 +1,25 @@
+remotename testvpn
+
+user "vpn"如果服务器是windows下面域环境这里的写法应为“域名\\用户名”用 用\ 对\进行转义
+
+password "vpn"
+
+unit 0
+
+lock
+
+nodeflate
+
+nobsdcomp
+
+noauth
+
+persist
+
+nopcomp
+
+noaccomp
+
+maxfail 5
+
+debug

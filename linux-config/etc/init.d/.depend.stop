@@ -1,0 +1,14 @@
+TARGETS = shadowsocks hostapd triggerhappy fake-hwclock dhcpcd polipo lighttpd vsftpd hddtemp l2tp-ipsec-vpn-daemon l2tpns apache2 proftpd isc-dhcp-server lightdm privoxy bluetooth openvpn xl2tpd shairport urandom ufw plymouth dnsmasq network-manager avahi-daemon kdm alsa-utils sendsigs rsyslog umountnfs.sh nfs-common rpcbind hwclock.sh networking umountfs umountroot halt reboot
+dnsmasq: proftpd privoxy apache2
+network-manager: openvpn
+avahi-daemon: shairport
+kdm: plymouth
+alsa-utils: shairport
+sendsigs: lighttpd shadowsocks proftpd openvpn avahi-daemon xl2tpd hostapd shairport vsftpd dnsmasq hddtemp kdm triggerhappy l2tp-ipsec-vpn-daemon isc-dhcp-server l2tpns lightdm alsa-utils privoxy bluetooth network-manager plymouth polipo apache2
+rsyslog: lighttpd sendsigs proftpd openvpn avahi-daemon xl2tpd vsftpd dnsmasq hddtemp l2tp-ipsec-vpn-daemon isc-dhcp-server l2tpns bluetooth network-manager apache2
+umountnfs.sh: lighttpd shadowsocks rsyslog proftpd openvpn avahi-daemon xl2tpd hostapd shairport vsftpd dnsmasq hddtemp kdm sendsigs triggerhappy l2tp-ipsec-vpn-daemon isc-dhcp-server l2tpns lightdm alsa-utils privoxy bluetooth network-manager plymouth polipo apache2
+networking: lighttpd shadowsocks proftpd openvpn xl2tpd vsftpd dnsmasq hddtemp rpcbind l2tp-ipsec-vpn-daemon isc-dhcp-server privoxy umountnfs.sh apache2
+umountfs: lighttpd shadowsocks networking proftpd openvpn avahi-daemon xl2tpd hostapd shairport vsftpd dnsmasq hddtemp kdm urandom triggerhappy rpcbind l2tp-ipsec-vpn-daemon isc-dhcp-server l2tpns lightdm alsa-utils dhcpcd privoxy umountnfs.sh hwclock.sh bluetooth network-manager plymouth polipo apache2
+umountroot: fake-hwclock umountfs
+halt: umountroot
+reboot: umountroot
